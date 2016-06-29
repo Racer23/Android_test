@@ -116,5 +116,5 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		Log.i(TAG, "对比== " + LOGIN_INFO);
 		assertEquals(LOGIN_INFO, tvShow.getText().toString());
 	}
-
+	
 }
