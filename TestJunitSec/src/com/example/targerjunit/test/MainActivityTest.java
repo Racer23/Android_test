@@ -96,7 +96,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		// 测试验证用户信息的预期值是否等于实际值
 		assertEquals("phicomm", etAccount.getText().toString());
 		// 密码的预期值1234与实际值1234不符，Failure;
-		assertEquals("1234", etPassword.getText().toString());
+		assertEquals("123", etPassword.getText().toString());
 	}
 
 	// 测试提交按钮
