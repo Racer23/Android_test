@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
 	private Instrumentation mInstrumentation;
 	private MainActivity mMainActivity;
-	private static final String LOGIN_INFO = "account：phicomm password：1234";
+	private static final String LOGIN_INFO = "account：phicomm password：yanghui";
 	// 控件
 	EditText etAccount, etPassword;
 	Button btSubmit;
@@ -85,7 +85,8 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 			}
 		});
 		// 调用sendKeys方法，输入密码
-		sendKeys(KeyEvent.KEYCODE_1, KeyEvent.KEYCODE_2, KeyEvent.KEYCODE_3, KeyEvent.KEYCODE_4);
+		sendKeys(KeyEvent.KEYCODE_Y, KeyEvent.KEYCODE_A, KeyEvent.KEYCODE_N, KeyEvent.KEYCODE_G, KeyEvent.KEYCODE_H,
+				KeyEvent.KEYCODE_U, KeyEvent.KEYCODE_I);
 	}
 
 	// 测试输入的用户信息
@@ -96,7 +97,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		// 测试验证用户信息的预期值是否等于实际值
 		assertEquals("phicomm", etAccount.getText().toString());
 		// 密码的预期值1234与实际值1234不符，Failure;
-		assertEquals("123", etPassword.getText().toString());
+		assertEquals("yanghui", etPassword.getText().toString());
 	}
 
 	// 测试提交按钮
@@ -116,5 +117,5 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		Log.i(TAG, "对比== " + LOGIN_INFO);
 		assertEquals(LOGIN_INFO, tvShow.getText().toString());
 	}
-	
+
 }
