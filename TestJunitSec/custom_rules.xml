@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    name="MainActivityTest"
+    default="help" >
+    <property name="reports.dir" value="F:/develop_sofrware/Jenkins/workspace/Android_test/TestJunitSec" />
+
+    <target name="fetch-test-report" >
+
+        <xpath
+            expression="/manifest/@package"
+            input="${tested.project.dir}/AndroidManifest.xml"
+            output="tested.package" />
+
+        <echo>
+			Downloading XML test report...
+        </echo>
+
+        <mkdir dir="${reports.dir}" />
+
+        <exec
+            executable="${adb}"
+            failonerror="true" >
+
+            <arg line="${adb.device.arg}" />
+
+            <arg value="pull" />
+
+            <arg value="/data/data/${tested.package}/files/junit-report.xml" />
+
+            <arg value="${reports.dir}/junit-report.xml" />
+        </exec>
+    </target>
+	
+</project>
