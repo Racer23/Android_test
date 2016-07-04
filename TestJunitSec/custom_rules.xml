@@ -2,7 +2,7 @@
 <project
     name="MainActivityTest"
     default="help" >
-    <property name="reports.dir" value="/User/.jenkins/workspace/7MFootball_Android_Test/TestJunitSec" />
+    <property name="reports.dir" value="/Users/jadian/.jenkins/workspace/7MFootball_Android_Test/TestJunitSec" />
 
     <target name="fetch-test-report" >
 
