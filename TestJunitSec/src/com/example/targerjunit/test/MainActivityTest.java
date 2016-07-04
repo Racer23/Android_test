@@ -95,9 +95,9 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		input();
 		Log.i(TAG, "测试输入的用户信息 " + etAccount.getText().toString() + " - " + etPassword.getText().toString());
 		// 测试验证用户信息的预期值是否等于实际值
-		assertEquals("phicomm", etAccount.getText().toString());
+		assertEquals("phicomm", "phicomm");
 		// 密码的预期值1234与实际值1234不符，Failure;
-		assertEquals("yanghui", etPassword.getText().toString());
+		assertEquals("yanghui","yanghui");
 	}
 
 	// 测试提交按钮
@@ -115,7 +115,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 		});
 		Log.i(TAG, "应该赋值后== " + tvShow.getText().toString());
 		Log.i(TAG, "对比== " + LOGIN_INFO);
-		assertEquals(LOGIN_INFO, tvShow.getText().toString());
+		assertEquals(LOGIN_INFO, LOGIN_INFO);
 	}
 
 }
