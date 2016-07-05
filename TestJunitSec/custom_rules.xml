@@ -2,7 +2,12 @@
 <project
     name="MainActivityTest"
     default="help" >
-    <property name="reports.dir" value="/Users/jadian/.jenkins/workspace/7MFootball_Android_Test/TestJunitSec" />
+
+    <!-- <property name="reports.dir" value="/Users/jadian/.jenkins/workspace/7MFootball_Android_Test/TestJunitSec" /> -->
+
+    <property
+        name="reports.dir"
+        value="E:/Jenkins/workspace/android_test/TestJunitSec" />
 
     <target name="fetch-test-report" >
 
@@ -12,7 +17,7 @@
             output="tested.package" />
 
         <echo>
-			Downloading XML test report...
+			Downloading XML test report...
         </echo>
 
         <mkdir dir="${reports.dir}" />
@@ -30,5 +35,5 @@
             <arg value="${reports.dir}/junit-report.xml" />
         </exec>
     </target>
-	
+
 </project>
